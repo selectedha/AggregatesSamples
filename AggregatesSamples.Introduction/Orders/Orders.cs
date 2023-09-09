@@ -20,6 +20,11 @@ namespace AggregatesSamples.Introduction.Orders
             return _orderLines.Where(p => p.OrderId == OrderId).Sum(p => p.GetTotalPrice());
         }
 
+        public void ChangeCount(int newCount, int orderLineId)
+        {
+            
+        }
+
         public Order(int addressLineId,  DateTime orderDate, List<OrderLine> orderLines)
         {
             if (addressLineId < 1)
